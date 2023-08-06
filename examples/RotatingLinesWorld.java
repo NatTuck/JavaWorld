@@ -27,7 +27,7 @@ import image.*;
 import world.World;
 
 /** World OnTick and Line Test */
-public class RotatingLinesWorld extends World{
+public class RotatingLinesWorld extends World {
     
     public static void main(String[] s){
         new RotatingLinesWorld(5.0).bigBang();
@@ -37,10 +37,12 @@ public class RotatingLinesWorld extends World{
     double ang;
     
     /** Construct a World with the given angle */
-    RotatingLinesWorld(double ang){ this.ang = ang; }
+    RotatingLinesWorld(double ang) {
+	this.ang = ang;
+    }
     
     /** Draw two lines at the current base angle */
-    public Scene onDraw(){
+    public Scene onDraw() {
         Image over = new Line(Math.cos(this.ang)*80,
                               Math.sin(this.ang)*80, "blue")
                       .overlay(new Line(Math.cos(this.ang*2)*100,
@@ -49,10 +51,12 @@ public class RotatingLinesWorld extends World{
     }
     
     /** On Tick update the angle */
-    public RotatingLinesWorld onTick(){
-        if(this.ang > 2*Math.PI)
+    public RotatingLinesWorld onTick() {
+        if(this.ang > 2*Math.PI) {
             return new RotatingLinesWorld(0);
-        else
+        }
+	else {
             return new RotatingLinesWorld(this.ang+Math.PI/180);
+	}
     }
 }

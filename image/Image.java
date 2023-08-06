@@ -43,7 +43,7 @@ import world.Posn;
  *  An abstract class representing an Image.  See subclasses for
  *    specific implementations.
  */
-public abstract class Image{
+public abstract class Image {
     protected static int OUTLINE = 0;
     protected static int SOLID = 1;
     

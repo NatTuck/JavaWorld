@@ -7,4 +7,4 @@ http://bryanchadwick.com/javaworld/
 
 Copyright (C) 2011 Bryan Chadwick.
 
-Licensed under the GNU GPL (any version).
+Licensed under the GNU GPL (v3 or later).
